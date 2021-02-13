@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% block title %}Gregslist{% endblock title %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center" style="height: 60vh;">
+            <div class="card " style="width: 18rem;">
+                <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+                <div class="card-body text-center">
+                    <h4 class="card-title">Links</h4>
+                    <p class="card-text"><a href="{{ url_for('cars')  }}">Cars</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

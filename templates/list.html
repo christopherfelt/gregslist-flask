@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+{% block title %} {{item_type}} {% endblock title %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12" style="height: auto;">
+                    <div class="">
+                        {% with fields=fields %}
+                            {% include "form.html" %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row" data-masonary='{"percentPosition": true}' >
+                {% for i in range(0, item_nums) %}
+                    <div class="card " style="width: 18rem;">
+                        <img class="card-img-top" src="//placehold.it/100x100" alt="">
+                        <div class="card-body text-center">
+                            {% with items=items, i=i %}
+                                {% include info_html %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

@@ -18,7 +18,7 @@
         <div class="col-9">
             <div class="row" data-masonary='{"percentPosition": true}' >
                 {% for i in range(0, item_nums) %}
-                    <div class="card " style="width: 18rem;">
+                    <div class="card " style="width: 18rem;" onclick='window.location.href="{{ url_for('detail', id=items[i].id) }}"'>
                         <img class="card-img-top" src="//placehold.it/100x100" alt="">
                         <div class="card-body text-center">
                             {% with items=items, i=i %}

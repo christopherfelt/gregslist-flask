@@ -41,6 +41,14 @@ class User(db.Model):
 def landing_page():
     return render_template('index.html')
 
+@app.route("/detail/<id>/", methods=["GET"])
+def detail(id):
+
+    item = Car.query.filter_by(id=id).all()
+    print(item[0].title)
+
+    return render_template('detail.html', item=item[0])
+
 @app.route("/cars", methods=["GET"])
 def cars():
     
